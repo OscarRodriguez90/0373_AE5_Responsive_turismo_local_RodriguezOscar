@@ -13,7 +13,7 @@ body {
 
 /* Header y Footer */
 header, footer {
-    width: 100%;
+    width: 100%; 
     background-color: #009353;
     color: white;
     text-align: center;
@@ -55,7 +55,31 @@ main {
 .columna img {
     width: 100%; /*  imágenes se ajusten columna */
 }
+.map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.galeria img {
+    width: calc(50% - 10px); /* Dos imágenes por fila */
+    height: auto;
+    border-radius: 8px;
+}
 
+
+iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: 0;
+}
 
 /* Títulos */
 h2 {
@@ -111,10 +135,36 @@ img {
 
 /* Footer */
 footer {
-    margin-top: 20px;
+    margin-top: 20px; 
     padding: 15px;
     font-size: 1rem;
 }
 
+@media (max-width: 700px) {
+    main {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .columna {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+    .columna img {
+        width: 100%;
+    }
+}
 
 
